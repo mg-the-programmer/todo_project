@@ -1,0 +1,86 @@
+body {
+  /* background-image: url("https://picsum.photos/id/79/1920/1080");
+  background-repeat: no-repeat; */
+}
+
+h1 {
+  color: #ffffff;
+  font-size: 48px;
+  margin-bottom: 80px;
+  /* margin-bottom: 20px 0px; */
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -70%);
+}
+
+.inputBoxCon {
+  width: 280px;
+  height: 30px;
+  margin: 20px auto;
+  display: flex;
+}
+
+.inputBox {
+  width: 350px;
+  height: 30px;
+  margin-top: -12.8px;
+  border: none;
+  outline: none;
+  z-index: 1;
+  background: transparent;
+  color: #ffffff;
+}
+::placeholder {
+  color: #ffffff;
+  opacity: 0.5;
+}
+
+legend {
+  z-index: 1;
+  color: #ffffff;
+  font-size: 13px;
+}
+fieldset {
+  border: 1px solid #fff;
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  margin-top: -10px;
+}
+
+label,
+a {
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.logBtn {
+  color: #1b427d;
+  font-weight: bold;
+  font-size: 23px;
+  padding: 5px 30px;
+  margin-top: 80px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+.logBtn:hover {
+  opacity: 0.6;
+}
+
+#remember {
+  margin-left: -1px;
+  border: none;
+  background: transparent;
+}
+
+.btnCon {
+  display: flex;
+  justify-content: space-evenly;
+}
