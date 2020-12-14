@@ -28,7 +28,7 @@ export default function Login() {
       <div className="btnCon">
         <button className="logBtn">Log in</button>
         <button className="logBtn" style={{ backgroundColor: "#4CAF50" }}>
-          Sign Up
+          Sign Up!
         </button>
       </div>
     </div>
