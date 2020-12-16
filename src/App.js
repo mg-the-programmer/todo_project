@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import TodoForm from "./Components/TodoForm";
 
-import "./App.css";
+import HomePage from "./HomePage";
 import Login from "./Login";
 import Signup from "./Signup";
 
@@ -24,7 +25,8 @@ function App() {
           </Route>
 
           <Route path="/">
-            <h1>Hello World</h1>
+            <HomePage />
+            {/* <TodoForm /> */}
           </Route>
           {/* <Signup /> */}
           {/* <h1>Hello Everyone </h1>

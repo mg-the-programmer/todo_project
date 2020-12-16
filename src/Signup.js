@@ -6,8 +6,13 @@ import AppCheck from "./Components/AppCheck";
 import AppInput from "./Components/AppInput";
 
 export default function Signup() {
+  document.body.style.backgroundColor = "#1b427d";
   return (
-    <div style={{ marginTop: 200 }}>
+    <div
+      style={{
+        marginTop: 200,
+        textAlign: "center",
+      }}>
       <h1>Sign Up!</h1>
       <AppInput placeholder="Username" legend="Username" />
       <AppInput placeholder="abcd@gmail.com" legend="Email ID" />

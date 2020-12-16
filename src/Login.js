@@ -7,6 +7,7 @@ import AppInput from "./Components/AppInput";
 import "./Login.css";
 
 export default function Login() {
+  document.body.style.backgroundColor = "#1b427d";
   return (
     <div className="container">
       <h1>Log in!</h1>
