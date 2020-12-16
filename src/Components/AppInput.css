@@ -1,0 +1,30 @@
+.inputBoxCon {
+  width: 280px;
+  height: 30px;
+  margin: 20px auto;
+  display: flex;
+}
+
+.inputBox {
+  width: 350px;
+  height: 30px;
+  margin-top: -11px;
+  border: none;
+  outline: none;
+  z-index: 1;
+  background: transparent;
+  color: #ffffff;
+}
+::placeholder {
+  color: #ffffff;
+  opacity: 0.5;
+}
+
+legend {
+  z-index: 1;
+  color: #ffffff;
+  font-size: 13px;
+}
+fieldset {
+  border: 1px solid #fff;
+}
