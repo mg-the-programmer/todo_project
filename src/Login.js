@@ -10,7 +10,7 @@ export default function Login() {
   document.body.style.backgroundColor = "#1b427d";
   return (
     <div className="container">
-      <h1>Log in!</h1>
+      <h1 id="title">Log in!</h1>
       <AppInput placeholder="abcd@gmail.com" legend="Email" />
       <AppInput placeholder="Password" legend="Password" type="password" />
       <div className="bottom">
@@ -18,13 +18,15 @@ export default function Login() {
         <a href="#">Forgot Password?</a>
       </div>
 
-      <Link to="/">
-        <AppButton title="Login" />
-      </Link>
+      <div className="btnCon">
+        <Link to="/">
+          <AppButton title="Login" />
+        </Link>
 
-      <Link to="/signup">
-        <AppButton title="Sign Up" style={{ backgroundColor: "#46a049" }} />
-      </Link>
+        <Link to="/signup">
+          <AppButton title="Sign Up" style={{ backgroundColor: "#46a049" }} />
+        </Link>
+      </div>
     </div>
   );
 }

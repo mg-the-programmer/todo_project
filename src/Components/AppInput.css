@@ -15,7 +15,7 @@
   background: transparent;
   color: #ffffff;
 }
-::placeholder {
+.inputBox::placeholder {
   color: #ffffff;
   opacity: 0.5;
 }

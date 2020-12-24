@@ -14,7 +14,7 @@ export default function AppButton({ title, style }) {
           border: none;
           cursor: pointer;
           outline: none;
-          margin:30px;
+          margin:0px 30px;
           margin-top:80px;
         }
         .logBtn:hover {
