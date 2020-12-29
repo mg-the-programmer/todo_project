@@ -40,7 +40,7 @@ export default function TodoApp() {
   return (
     <div className="App">
       <h1>Hello Guys </h1>
-      <form>
+      <form className="todo_form">
         <FormControl className="input_con">
           <InputLabel>Write your Todos</InputLabel>
           <Input
