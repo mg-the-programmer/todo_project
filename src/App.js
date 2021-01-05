@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import TodoApp from "./Components/TodoApp";
+import HomePage from "./HomePage";
 
 import Login from "./Login";
 import Signup from "./Signup";
@@ -24,19 +25,8 @@ function App() {
           </Route>
 
           <Route path="/">
-            <TodoApp />
-            {/* <HomePage />
-            <TodoList /> */}
+            <HomePage />
           </Route>
-          {/* <Signup /> */}
-          {/* <h1>Hello Everyone </h1>
-      <input />
-      <button>Add Todo</button>
-      <ul>
-        <li></li>
-        <li></li>
-      </ul> */}
-          {/* <Login /> */}
         </Switch>
       </div>
     </Router>

@@ -2,11 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import Random from "./Components/Random";
+import TodoApp from "./Components/TodoApp";
 import "./HomePage.css";
 import apple from "./Icons/apple.png";
-
-import TodoList from "./Components/TodoList";
-import TodoForm from "./Components/TodoForm";
 
 export default function HomePage() {
   document.body.style.backgroundColor = "#ffffff";
@@ -21,7 +19,7 @@ export default function HomePage() {
         </div>
         <Random />
       </header>
-      {/* <TodoForm /> */}
+      <TodoApp />
     </div>
   );
 }

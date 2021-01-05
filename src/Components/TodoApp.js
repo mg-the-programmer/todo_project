@@ -1,5 +1,14 @@
-import { Button, FormControl, InputLabel, Input } from "@material-ui/core";
+import {
+  Button,
+  FormControl,
+  InputLabel,
+  Input,
+  IconButton,
+} from "@material-ui/core";
 import React, { useState, useEffect } from "react";
+import AddCircleIcon from "@material-ui/icons/AddCircle";
+import MenuRoundedIcon from "@material-ui/icons/MenuRounded";
+
 import Todo from "./Todo";
 import "./TodoApp.css";
 import db from "../firebase.js";
@@ -38,31 +47,40 @@ export default function TodoApp() {
   };
 
   return (
-    <div className="App">
-      <h1>Hello Guys </h1>
-      <form className="todo_form">
-        <FormControl className="input_con">
-          <InputLabel>Write your Todos</InputLabel>
-          <Input
-            value={input}
-            onChange={(event) => setInput(event.target.value)}
-          />
-        </FormControl>
-        <Button
-          disabled={!input}
+    <div className="todoListCon">
+      <header className="todoHeader">
+        <p>My Tasks </p>
+        <MenuRoundedIcon />
+      </header>
+      <form className="todoInputCon">
+        <IconButton
           type="submit"
           onClick={addTodo}
-          variant="contained"
-          color="primary">
-          Add Todo
-        </Button>
+          style={{
+            width: 50,
+            height: 40,
+          }}>
+          <AddCircleIcon
+            style={{
+              color: "#1b427d",
+              width: 50,
+              height: 40,
+              padding: 0,
+              margin: 0,
+            }}
+          />
+        </IconButton>
+        <input
+          className="todoInput"
+          value={input}
+          placeholder="New Task"
+          onChange={(event) => setInput(event.target.value)}
+        />
       </form>
-      <ul>
-        {todos.map((todo) => (
-          <Todo todo={todo} />
-          // <li>{todo}</li>
-        ))}
-      </ul>
+      {todos.map((todo) => (
+        <Todo todo={todo} />
+        // <li>{todo}</li>
+      ))}
     </div>
   );
 }

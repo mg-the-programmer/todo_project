@@ -1,10 +1,43 @@
 .todo_list {
-  text-align: center;
+  /* text-align: center; */
   display: flex;
   align-items: center;
+  height: 50px;
 }
 
-.todoContainer {
-  width: 50%;
-  margin: 0 auto;
+.doneTodo {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 28px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 28px;
+}
+
+.contentCon {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.checkBox {
+  color: #1b427d;
+  margin-left: -25px;
+  padding: 0;
+}
+
+.todoText {
+  height: 20px;
+  width: 100%;
+  border: none;
+  font-size: 15px;
+  margin-left: -12px;
+}
+
+.modalNav {
+  display: flex;
+  justify-content: space-between;
 }
