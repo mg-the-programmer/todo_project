@@ -22,14 +22,10 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function AppModal({ todo, id, ...props }) {
+export default function AppModal({ todo, id, onClose, ...props }) {
   const classes = useStyles();
 
-  const [open, setOpen] = useState(false);
   const [input, setInput] = useState("");
-
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
 
   const updateTodo = (event) => {
     event.preventDefault();
@@ -43,7 +39,8 @@ export default function AppModal({ todo, id, ...props }) {
       },
       { merge: true }
     );
-    handleClose();
+    setInput("");
+    onClose();
   };
 
   return (
@@ -53,11 +50,9 @@ export default function AppModal({ todo, id, ...props }) {
           <header className="modalNav">
             <DeleteOutlinedIcon
               fontSize="large"
-              onClick={(event) =>
-                db.collection("Todos").doc(props.todo.id).delete()
-              }
+              onClick={(event) => db.collection("Todos").doc(id).delete()}
             />
-            <CloseOutlinedIcon onClick={handleClose} fontSize="large" />
+            <CloseOutlinedIcon onClick={onClose} fontSize="large" />
           </header>
           <form className="editCon">
             <input

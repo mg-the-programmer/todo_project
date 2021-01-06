@@ -25,7 +25,8 @@
 
 .checkBox {
   color: #1b427d;
-  margin-left: -25px;
+  position: relative;
+  left: -10px;
   padding: 0;
 }
 
