@@ -5,6 +5,7 @@ import { Modal, Button } from "@material-ui/core";
 
 import DeleteOutlinedIcon from "@material-ui/icons/DeleteOutlined";
 import CloseOutlinedIcon from "@material-ui/icons/CloseOutlined";
+import EditableInput from "./EditableInput";
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -18,6 +19,9 @@ const useStyles = makeStyles((theme) => ({
     boxShadow: theme.shadows[15],
     padding: 20,
     color: "#1b427d",
+    outline: "none",
+    border: "none",
+    // padding:"10px"
     // padding: theme.spacing(2, 4, 3),
   },
 }));
@@ -25,21 +29,14 @@ const useStyles = makeStyles((theme) => ({
 export default function AppModal({ todo, id, onClose, ...props }) {
   const classes = useStyles();
 
+  const buttonStyle = {
+    cursor: "pointer",
+  };
+
   const [input, setInput] = useState("");
 
-  const updateTodo = (event) => {
-    event.preventDefault();
-    if (!input) {
-      return (input = todo);
-    }
-
-    db.collection("Todos").doc(id).set(
-      {
-        todo: input,
-      },
-      { merge: true }
-    );
-    setInput("");
+  const deleteTodo = () => {
+    db.collection("Todos").doc(id).delete();
     onClose();
   };
 
@@ -49,25 +46,19 @@ export default function AppModal({ todo, id, onClose, ...props }) {
         <div className={classes.paper}>
           <header className="modalNav">
             <DeleteOutlinedIcon
+              style={buttonStyle}
               fontSize="large"
-              onClick={(event) => db.collection("Todos").doc(id).delete()}
+              onClick={deleteTodo}
             />
-            <CloseOutlinedIcon onClick={onClose} fontSize="large" />
+            <CloseOutlinedIcon
+              style={buttonStyle}
+              onClick={onClose}
+              fontSize="large"
+            />
           </header>
           <form className="editCon">
-            <input
-              placeholder={todo}
-              type="text"
-              value={input}
-              onChange={(e) => setInput(e.target.value)}
-            />
-            <Button
-              onClick={updateTodo}
-              color="primary"
-              variant="contained"
-              type="submit">
-              Update Todo
-            </Button>
+            <EditableInput todo={todo} id={id} />
+            {/* <span>{todo}</span> */}
           </form>
         </div>
       </Modal>

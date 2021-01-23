@@ -26,14 +26,27 @@
 .checkBox {
   color: #1b427d;
   position: relative;
-  left: -10px;
+  left: -5px;
   padding: 0;
 }
 
 .todoText {
+  display: flex;
+  align-items: center;
   height: 20px;
-  width: 100%;
+  margin-left: -12px;
+}
+.editInput {
+  width: 130px;
   border: none;
+  outline: none;
+  height: 20px;
+  font-size: 15px;
+}
+
+.normalInput {
+  width: 165px;
+  height: 20px;
   font-size: 15px;
   margin-left: -12px;
 }

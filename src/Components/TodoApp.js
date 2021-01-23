@@ -1,10 +1,4 @@
-import {
-  Button,
-  FormControl,
-  InputLabel,
-  Input,
-  IconButton,
-} from "@material-ui/core";
+import { IconButton } from "@material-ui/core";
 import React, { useState, useEffect } from "react";
 import AddCircleIcon from "@material-ui/icons/AddCircle";
 import MenuRoundedIcon from "@material-ui/icons/MenuRounded";
@@ -58,12 +52,12 @@ export default function TodoApp() {
           onClick={addTodo}
           style={{
             width: 50,
-            height: 40,
+            height: 50,
           }}>
           <AddCircleIcon
             style={{
               color: "#1b427d",
-              width: 50,
+              width: 35,
               height: 40,
               padding: 0,
               margin: 0,
@@ -79,7 +73,6 @@ export default function TodoApp() {
       </form>
       {todos.map((todo) => (
         <Todo todo={todo} />
-        // <li>{todo}</li>
       ))}
     </div>
   );

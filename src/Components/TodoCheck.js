@@ -4,10 +4,11 @@ import CircleCheckedFilled from "@material-ui/icons/CheckCircle";
 import CircleUnchecked from "@material-ui/icons/RadioButtonUnchecked";
 import "./Todo.css";
 
-export default function TodoCheck() {
+export default function TodoCheck({ ...props }) {
   return (
     <div className="checkBox">
       <Checkbox
+        {...props}
         icon={
           <CircleUnchecked
             style={{
@@ -34,6 +35,7 @@ export default function TodoCheck() {
           color: "#1b427d",
           backgroundColor: "transparent",
         }}
+        className="checkBox"
       />
     </div>
   );
